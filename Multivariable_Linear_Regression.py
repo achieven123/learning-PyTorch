@@ -17,10 +17,10 @@ b = torch.zeros(1, requires_grad=True)
 
 optimizer = optim.SGD([W, b], lr=1e-5)
 
-nb_epochs = 1000
+nb_epochs = 100000
 
 for epoch in range(nb_epochs + 1):
-    hypothesis = x_train * W + b
+    hypothesis = x_train.matmul(W) + b
 
     cost = torch.mean((hypothesis - y_train) ** 2)
 
