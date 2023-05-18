@@ -1,0 +1,8 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.arange(1, 6, 0.1)
+y = np.sin(x)
+
+print(x)
+print(y)
